@@ -8,6 +8,13 @@ const news = require("./data/news.json");
 
 app.use(cors());
 
+const corsOptions = {
+  origin: "*",
+  credentials: true,
+  optionSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
+
 app.get("/", (req, res) => {
   res.send("Rabbit is running");
 });
