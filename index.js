@@ -37,5 +37,5 @@ app.get("/categoris/:id", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Rabbit is running on port : ${port}`);
+  console.log(`Rabbit is running on port : http://localhost:${port}`);
 });
