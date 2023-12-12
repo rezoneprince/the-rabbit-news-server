@@ -1,19 +1,13 @@
 const express = require("express");
-const app = express();
 const cors = require("cors");
-const port = process.env.PORT || 5000;
+const app = express();
 
-const categoris = require("./data/categoris.json");
-const news = require("./data/news.json");
+const port = process.env.PORT || 5000;
 
 app.use(cors());
 
-const corsOptions = {
-  origin: "*",
-  credentials: true,
-  optionSuccessStatus: 200,
-};
-app.use(cors(corsOptions));
+const categoris = require("./data/categoris.json");
+const news = require("./data/news.json");
 
 app.get("/", (req, res) => {
   res.send("Rabbit is running");
